@@ -1,17 +1,19 @@
-# EasyConnectedInChina
+# 汇总各种工具国内镜像源和设置镜像源的方法
 【目前施工ing....】
 
 欢迎大家一同参与XD~
 
 汇总apt，pip，nodejs等各种工具国内镜像源和设置镜像源的方法
 
-<h2 id="contents"> 目录</h2>
+<h2 id="contents">目录</h2>
 
 [目录](#contents)  
 [前言](#front)  
+[正文](#text)  
 &nbsp; &nbsp;[pip](#pip)  
 [参考 / 感谢](#thanks-to)  
 
+<h1 id="text">正文</h1>
 <h2 id="front"> 前言</h2>
 过于国内特殊的网络环境，想比大家都经历过低速下载、404、丢失链接等等等等等问题。
 
