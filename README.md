@@ -48,7 +48,8 @@
 #### 方法二：更改默认源
 创建或修改配置文件（一般都是创建）
 - linux的文件在~/.pip/pip.conf，
-     vim ~/.pip/pip.conf
+- 
+      vim ~/.pip/pip.conf
 - windows在%HOMEPATH%\pip\pip.ini
 
 更改内容：
