@@ -5,14 +5,21 @@
 
 汇总apt，pip，nodejs等各种工具国内镜像源和设置镜像源的方法
 
-## 前言
+<h2 id="contents"> 目录</h2>
+
+[目录](#contents)  
+[前言](#front)  
+&nbsp; &nbsp;[pip](#pip)  
+[参考 / 感谢](#thanks-to)  
+
+<h2 id="front"> 前言</h2>
 过于国内特殊的网络环境，想比大家都经历过低速下载、404、丢失链接等等等等等问题。
 
 这非常影响我们的工作效率，而百度一个一个找国内源的更换方法则非常麻烦，特此在这里进行一个小汇总。
 
 如果大家遇到操作问题可以提交issue，也欢迎大家也pull request来贡献自己知道的源和方法~
 
-## pip
+<h2 id="pip"> pip</h2>
 ### 源地址
 - 阿里云 <https://mirrors.aliyun.com/pypi/simple/>
 - 中国科技大学 <https://pypi.mirrors.ustc.edu.cn/simple/>
@@ -72,5 +79,5 @@ os.system(command)
 ```
 
 
-## 参考 / 感谢
+<h2 id="thanks-to">参考 / 感谢</h2>
 - pip取材：<https://www.cnblogs.com/sunnydou/p/5801760.html>
