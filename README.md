@@ -22,7 +22,9 @@
 如果大家遇到操作问题可以提交issue，也欢迎大家也pull request来贡献自己知道的源和方法~
 
 <h2 id="pip"> pip</h2>
+
 ### 源地址
+
 - 阿里云 <https://mirrors.aliyun.com/pypi/simple/>
 - 中国科技大学 <https://pypi.mirrors.ustc.edu.cn/simple/>
 - 豆瓣(douban) <http://pypi.douban.com/simple/>
@@ -46,7 +48,7 @@
 #### 方法二：更改默认源
 创建或修改配置文件（一般都是创建）
 - linux的文件在~/.pip/pip.conf，
--     vim ~/.pip/pip.conf
+     vim ~/.pip/pip.conf
 - windows在%HOMEPATH%\pip\pip.ini
 
 更改内容：
