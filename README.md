@@ -87,6 +87,8 @@ os.system(command)
 <h2 id="npm"> npm</h2>
 
 ### 源地址
+- 官方源：<https://registry.npmjs.org/>  
+(搜索网址：<https://www.npmjs.com/>)
 - 淘宝源 <http://registry.npm.taobao.org/>  
 (搜索网址：<http://npm.taobao.org/>)
 - cnpmjs <http://r.cnpmjs.org/>  
