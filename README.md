@@ -11,6 +11,7 @@
 [前言](#front)  
 [正文](#text)  
 &nbsp; &nbsp;[pip](#pip)  
+&nbsp; &nbsp;[npm](#npm)  
 [参考 / 感谢](#thanks-to)  
 
 <h1 id="text">正文</h1>
@@ -83,7 +84,57 @@ command = "pip install %s -i https://mirrors.aliyun.com/pypi/simple/" % package
 os.system(command)
 ```
 
+<h2 id="npm"> npm</h2>
+
+### 源地址
+- 淘宝源 <http://registry.npm.taobao.org/>  
+(搜索网址：<http://npm.taobao.org/>)
+- cnpmjs <http://r.cnpmjs.org/>  
+(搜索网址：<http://cnpmjs.org/>)
+
+### 使用方法
+请注意，使用镜像库均不能publish，如需publish需要换回官方库
+#### 方法一：使用cnpm替代
+安装cnpm：
+```
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+```
+之后使用cnpm替代npm命令即可。支持除publish外所有命令：
+```
+cnpm install [name]
+```
+官方网址：<http://npm.taobao.org/>
+
+#### 方法二：临时替换
+在执行npm命令时指定参数registry即可：
+```
+npm --registry https://registry.npm.taobao.org install express
+```
+
+#### 方法三：持久使用
+在命令行中执行：
+```
+npm config set registry https://registry.npm.taobao.org
+```
+<b>或者</b>在`~/.npmrc`中添加
+```
+registry = https://registry.npm.taobao.org
+```
+（执行`vim ~/.npmrc`即可更改`.npmrc`内容）
+
+查看更改是否生效：
+```
+npm config get registry
+```
+或者
+```
+npm info express
+```
 
 <h2 id="thanks-to">参考 / 感谢</h2>
 
-- pip取材：<https://www.cnblogs.com/sunnydou/p/5801760.html>
+- pip取材：  
+<https://www.cnblogs.com/sunnydou/p/5801760.html>
+- npm取材：  
+<https://www.cnblogs.com/martinl/p/6513143.html>
+<http://cnodejs.org/topic/4f9904f9407edba21468f31e>
