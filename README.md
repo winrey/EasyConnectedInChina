@@ -11,7 +11,8 @@
 [前言](#front)  
 [正文](#text)  
 &nbsp; &nbsp;[pip](#pip)  
-&nbsp; &nbsp;[npm](#npm)  
+&nbsp; &nbsp;[npm](#npm)   
+&nbsp; &nbsp;[brew](#brew)  
 [参考 / 感谢](#thanks-to)  
 
 <h1 id="text">正文</h1>
@@ -48,10 +49,11 @@
 
 #### 方法二：更改默认源
 创建或修改配置文件（一般都是创建）
-- linux的文件在~/.pip/pip.conf，
+- linux与mac的设置的文件在~/.pip/pip.conf，
 - 
       vim ~/.pip/pip.conf
 - windows在%HOMEPATH%\pip\pip.ini
+- 如果没有创建即可。
 
 更改内容：
 ```
@@ -132,6 +134,12 @@ npm config get registry
 ```
 npm info express
 ```
+
+<h2 id="brew">brew</h2>
+【施工ing...】
+### 说明
+### 源地址
+
 
 <h2 id="thanks-to">参考 / 感谢</h2>
 
