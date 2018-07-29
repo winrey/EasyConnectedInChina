@@ -12,7 +12,8 @@
 [正文](#text)  
 &nbsp; &nbsp;[pip](#pip)  
 &nbsp; &nbsp;[npm](#npm)   
-&nbsp; &nbsp;[brew](#brew)  
+&nbsp; &nbsp;[brew](#brew)    
+&nbsp; &nbsp;[docker](#docker)  
 [参考 / 感谢](#thanks-to)  
 
 <h1 id="text">正文</h1>
@@ -86,7 +87,7 @@ command = "pip install %s -i https://mirrors.aliyun.com/pypi/simple/" % package
 os.system(command)
 ```
 
-<h2 id="npm"> npm</h2>
+<h2 id="npm">npm</h2>
 
 ### 源地址
 - 官方源：<https://registry.npmjs.org/>  
@@ -141,6 +142,8 @@ npm info express
 ### 说明
 
 ### 源地址
+
+<h2 id="docker">docker</h2>
 
 
 <h2 id="thanks-to">参考 / 感谢</h2>
