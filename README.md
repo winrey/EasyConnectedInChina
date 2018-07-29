@@ -145,6 +145,25 @@ npm info express
 
 <h2 id="docker">docker</h2>
 
+### 概述
+docker的国外源的速度感人，为了避免影响生产效率，建议更换为国内源。  
+一般国内源比较常用的是阿里源和DAO源。  
+由于使用镜像需要注册相应的账号，每个人获得的镜像链接也不相同。 **因此在这里我们不提供具体的方法和链接，但是给出镜像源官方的指导链接，大家可以按照官方指导的步骤操作。**  
+值得注意的是， mac上有两种Docker，依赖的技术不一样，一个可以使用命令改更改（老版Docker Toolbox依赖VirtualBox），另一个建议使用GUI修改（新版Docker for mac依赖HyperKit）。  
+Linux的修改方式与Docker Toolbox相同。
+
+### 阿里源
+* 设置教程 + 个人加速链接  
+<https://cr.console.aliyun.com/cn-hangzhou/mirrors>
+
+### DaoCloud
+
+* 加速链接获取与简短教程  
+<https://www.daocloud.io/mirror#accelerator-doc>  
+  
+* 详细wiki  
+<http://guide.daocloud.io/dcs/docker-9153151.html>
+
 
 <h2 id="thanks-to">参考 / 感谢</h2>
 
