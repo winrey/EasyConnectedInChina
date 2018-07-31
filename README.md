@@ -152,7 +152,7 @@ brew为macOS中的软件包管理工具，相当于linux中的apt、yum。可以
     ```shell
 cd "$(brew --repo)"
 git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
-```
+    ```
 其中___https://mirrors.ustc.edu.cn/brew.git___为源地址。我们这里使用的是中科大的源作为演示。
 
 * brew.git库地址。记录更新和安装脚本。
