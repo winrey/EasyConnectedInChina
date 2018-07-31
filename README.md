@@ -158,29 +158,29 @@ git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
 
 * brew.git库地址。记录更新和安装脚本。
 
-    ```shell
+```shell
 cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
 git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
-    ```
+```
     
 其中___https://mirrors.ustc.edu.cn/homebrew-core.git___为源地址。
 
 * 二进制库Homebrew Bottles源
     * bash用户：
     
-        ```shell
+```shell
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
 source ~/.bash_profile
-        ```
+```
         
         其中___https://mirrors.ustc.edu.cn/homebrew-bottles___为源地址。
         
     * zsh用户：
     
-        ```shell
+```shell
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
 source ~/.zshrc
-        ```
+```
         
         其中___https://mirrors.ustc.edu.cn/homebrew-bottles___为源地址。
         
