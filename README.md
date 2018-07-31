@@ -3,7 +3,7 @@
 
 欢迎大家一同参与XD~
 
-汇总apt，pip，nodejs等各种工具国内镜像源和设置镜像源的方法
+汇总brew，pip，nodejs等各种工具国内镜像源和设置镜像源的方法
 
 <h2 id="contents">目录</h2>
 
@@ -57,11 +57,13 @@
 - 如果没有创建即可。
 
 更改内容：
+
 ```
 [global]
 index-url = https://mirrors.aliyun.com/pypi/simple/
 ```
 或
+
 ```
 [global]
 index-url = http://pypi.douban.com/simple
@@ -75,6 +77,7 @@ trusted-host=pypi.douban.com
 
 #### 方法三：python代码更改安装源
 临时使用其他源安装软件包的python脚本如下：
+
 ```
 #!/usr/bin/python
  
@@ -137,11 +140,76 @@ npm info express
 ```
 
 <h2 id="brew">brew</h2>
-【施工ing...】
 
 ### 说明
+brew为macOS中的软件包管理工具，相当于linux中的apt、yum。可以用brew下载命令行程序，brew cask下载编译完成的二进制GUI程序。  
+但是国内速度感人，因此我们要替换成国内源。
+### 方法
+替换国内源要替换几个地址。  
+
+* homebrew-core.git库地址。是brew的主程序地址
+
+    ```shell
+cd "$(brew --repo)"
+git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+```
+其中___https://mirrors.ustc.edu.cn/brew.git___为源地址。我们这里使用的是中科大的源作为演示。
+
+* brew.git库地址。记录更新和安装脚本。
+
+    ```shell
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+
+    ```
+其中___https://mirrors.ustc.edu.cn/homebrew-core.git___为源地址。
+
+* 二进制库Homebrew Bottles源
+    * bash用户：
+    
+        ```shell
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
+source ~/.bash_profile
+
+        ```
+        其中___https://mirrors.ustc.edu.cn/homebrew-bottles___为源地址。
+    * zsh用户：
+    
+        ```shell
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
+source ~/.zshrc
+
+        ```
+        其中___https://mirrors.ustc.edu.cn/homebrew-bottles___为源地址。
+* 都替换完成后执行`brew update`即可。
+
 
 ### 源地址
+#### 官方源
+
+| 类型 | 地址 |
+| -------- | ------- |
+| brew.git | <https://github.com/Homebrew/brew.git> |
+| homebrew-core.git | <https://github.com/Homebrew/homebrew-core.git> |
+| Homebrew Bottles | / |
+
+#### 中科大源
+
+| 类型 | 地址 |
+| -------- | ------- |
+| brew.git | <https://mirrors.ustc.edu.cn/brew.git> |
+| homebrew-core.git | <https://mirrors.ustc.edu.cn/homebrew-core.git> |
+| Homebrew Bottles | <https://mirrors.ustc.edu.cn/homebrew-bottles> |
+
+#### 清华源
+
+| 类型 | 地址 |
+| -------- | ------- |
+| brew.git | <https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git> |
+| homebrew-core.git | <https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git> |
+| homebrew-science.git | <https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-science.git> |
+| homebrew-python.git | <https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-python.git> |
+| Homebrew Bottles | <https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles> |
 
 <h2 id="docker">docker</h2>
 
@@ -172,3 +240,5 @@ Linux的修改方式与Docker Toolbox相同。
 - npm取材：  
 <https://www.cnblogs.com/martinl/p/6513143.html>  
 <http://cnodejs.org/topic/4f9904f9407edba21468f31e>
+- brew取材：  
+<https://thief.one/2017/08/24/1/>
