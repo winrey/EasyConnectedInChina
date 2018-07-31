@@ -163,7 +163,7 @@ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
 git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 ```
     
-其中___https://mirrors.ustc.edu.cn/homebrew-core.git___为源地址。
+其中***https://mirrors.ustc.edu.cn/homebrew-core.git***为源地址。
 
 * 二进制库Homebrew Bottles源
     * bash用户：
@@ -172,7 +172,7 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile  
 source ~/.bash_profile  
 ```
-其中___https://mirrors.ustc.edu.cn/homebrew-bottles___为源地址。
+其中***https://mirrors.ustc.edu.cn/homebrew-bottles***为源地址。
         
     * zsh用户：
     
@@ -180,7 +180,7 @@ source ~/.bash_profile
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
 source ~/.zshrc
 ```
-其中___https://mirrors.ustc.edu.cn/homebrew-bottles___为源地址。
+其中***https://mirrors.ustc.edu.cn/homebrew-bottles***为源地址。
         
 * 都替换完成后执行`brew update`即可。
 
