@@ -13,7 +13,8 @@
 &nbsp; &nbsp;[pip](#pip)  
 &nbsp; &nbsp;[npm](#npm)   
 &nbsp; &nbsp;[brew](#brew)    
-&nbsp; &nbsp;[docker](#docker)  
+&nbsp; &nbsp;[docker](#docker)
+&nbsp; &nbsp;[yum](#yum)
 [参考 / 感谢](#thanks-to)  
 
 <h1 id="text">正文</h1>
@@ -232,6 +233,66 @@ Linux的修改方式与Docker Toolbox相同。
   
 * 详细wiki  
 <http://guide.daocloud.io/dcs/docker-9153151.html>
+
+
+<h2 id="yum"> yum</h2>
+
+### 源地址
+
+- 清华大学 <https://mirrors.tuna.tsinghua.edu.cn/centos>
+
+### 使用方法
+
+首先备份 CentOS-Base.repo 
+```
+sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
+```
+之后启用 TUNA 软件仓库， 将以下内容写入 /etc/yum.repos.d/CentOS-Base.repo
+```
+# CentOS-Base.repo
+#
+# The mirror system uses the connecting IP address of the client and the
+# update status of each mirror to pick mirrors that are updated to and
+# geographically close to the client.  You should use this for CentOS updates
+# unless you are manually picking other mirrors.
+#
+# If the mirrorlist= does not work for you, as a fall back you can try the
+# remarked out baseurl= line instead.
+#
+#
+
+[base]
+name=CentOS-$releasever - Base
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/os/$basearch/
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+#released updates
+[updates]
+name=CentOS-$releasever - Updates
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/updates/$basearch/
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=updates
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+#additional packages that may be useful
+[extras]
+name=CentOS-$releasever - Extras
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/extras/$basearch/
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+#additional packages that extend functionality of existing packages
+[centosplus]
+name=CentOS-$releasever - Plus
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/centosplus/$basearch/
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+```
 
 
 <h2 id="thanks-to">参考 / 感谢</h2>
