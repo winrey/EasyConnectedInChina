@@ -304,3 +304,9 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 <http://cnodejs.org/topic/4f9904f9407edba21468f31e>
 - brew取材：  
 <https://thief.one/2017/08/24/1/>
+
+<h2 id="contributor">贡献者</h2>
+
+- [Winrey](https://github.com/winrey)
+
+- [Xin Wang](https://github.com/HsimWong)
